@@ -59,7 +59,7 @@ int main(){
     two.store(1,0,water);
 
     //test equip
-    two.equip(&sword);
+    two.equip(new Item("sword", 7.5, WEAPON));
     //test accessors
     std::cout << "Inventory two has equipped: " << two.getEquipped()->name_ << "\n";
     two.discardEquipped();
