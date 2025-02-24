@@ -50,7 +50,7 @@ int main(){
     // test Constructor
     Inventory one;
     Inventory two;
-    Inventory* three = nullptr;
+    Inventory *three = nullptr;
 
     //test destructor
     delete three;
