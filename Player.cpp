@@ -14,7 +14,7 @@ Inventory& Player::getInventoryRef(){
 }
 
 //Copy constructor
-Player::Player(const Player& rhs): inventory_(rhs.inventory_), name_(rhs.name_){}
+Player::Player(const Player& rhs): name_(rhs.name_), inventory_(rhs.inventory_){}
 
 //Move Constructor
 Player::Player(Player&& rhs) : name_(std::move(rhs.name_)), inventory_(std::move(rhs.inventory_)){}
