@@ -29,8 +29,8 @@ void Inventory::equip(Item* itemToEquip){
 
 //Discard Equipped Item
 void Inventory::discardEquipped(){
-    delete equipped_;
     if(equipped_ != nullptr){
+        delete equipped_;
         equipped_ = nullptr;
     }
 }
