@@ -79,15 +79,6 @@ int main(){
         std::cout << std::endl;
     }
 
-    //test move constructor
-    Inventory four(std::move(two));
-     std::vector<std::vector<Item>> retrieved_itemsFour = four.getItems();
-    for (size_t i = 0; i < retrieved_items.size(); ++i) {
-        for (size_t j = 0; j < retrieved_itemsFour[i].size(); ++j) {
-            std::cout << retrieved_itemsFour[i][j].name_;
-        }
-        std::cout << std::endl;
-    }
 
 
 
