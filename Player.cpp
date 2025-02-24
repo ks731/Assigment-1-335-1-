@@ -1,7 +1,7 @@
 #include "Player.hpp"
 
 //Player Constructor
-Player::Player(const std::string& name, const Inventory& inventory) : name_(name), inventory_(inventory){}
+Player::Player(const std::string& name, const Inventory& inventory) : inventory_(inventory),  name_(name){}
 
 //Get name of player
 std::string Player::getName() const{
@@ -14,10 +14,10 @@ Inventory& Player::getInventoryRef(){
 }
 
 //Copy constructor
-Player::Player(const Player& rhs): name_(rhs.name_), inventory_(rhs.inventory_){}
+Player::Player(const Player& rhs):  inventory_(rhs.inventory_), name_(rhs.name_){}
 
 //Move Constructor
-Player::Player(Player&& rhs) : name_(std::move(rhs.name_)), inventory_(std::move(rhs.inventory_)){}
+Player::Player(Player&& rhs) :  inventory_(std::move(rhs.inventory_)), name_(std::move(rhs.name_)){}
 
 //Copy Assignment Operator
 Player& Player::operator=(const Player& rhs){
