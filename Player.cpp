@@ -38,6 +38,7 @@ Player& Player::operator=(Player&& rhs){
 }
 
 int main(){
+    std::cout<< "Print TESTING .... " << "\n";
     //Items
     Item sword("Sword", 7.5, WEAPON);
     Item chestplate("Chestplate", 8.5, ARMOR);
