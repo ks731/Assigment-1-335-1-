@@ -23,17 +23,12 @@ Item* Inventory::getEquipped() const{
 
 //Updates `equipped` to the specified item 
 void Inventory::equip(Item* itemToEquip){
-    std::cout << "Equipping item: " << itemToEquip->name_ << "\n";
-
         equipped_ = itemToEquip;
-
 }
 
 //Discard Equipped Item
 void Inventory::discardEquipped(){
     if(equipped_ != nullptr){
-std::cout << "Discarding item: " << equipped_->name_ << "\n";
-
         delete equipped_;
         equipped_ = nullptr;
     }
