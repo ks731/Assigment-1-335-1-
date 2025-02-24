@@ -49,7 +49,7 @@ int main(){
     //Inventories
     // test Constructor
     Inventory one;
-    Inventory two;
+    Inventory two; 
     Inventory *three = nullptr;
 
     //test destructor
@@ -59,6 +59,9 @@ int main(){
     two.store(0,0,shoes);
     two.store(1,0,chestplate);
     two.store(2,0,water);
+
+    //test move constructor
+    Inventory four(std::move(two));
 
     //test equip
     two.equip(sword);
