@@ -39,7 +39,7 @@ Player& Player::operator=(Player&& rhs){
 
 int main(){
     //Items
-    Item* sword = new Item("Sword", 7.5, WEAPON);
+    Item* sword = new Item("Sword", 7.5, WEAPON);   //Item pointer 
     Item chestplate("Chestplate", 8.5, ARMOR);
     Item water("Water", 1.5, ACCESSORY);
     Item canon("Canon", 200.7, WEAPON);
@@ -57,8 +57,8 @@ int main(){
 
     //test store()
     two.store(0,0,shoes);
-    two.store(0,1,chestplate);
-    two.store(1,0,water);
+    two.store(1,0,chestplate);
+    two.store(2,0,water);
 
     //test equip
     two.equip(sword);
@@ -71,9 +71,8 @@ int main(){
     std::vector<std::vector<Item>> retrieved_items = two.getItems();
     for (size_t i = 0; i < retrieved_items.size(); ++i) {
         for (size_t j = 0; j < retrieved_items[i].size(); ++j) {
-            std::cout << retrieved_items[i][j].name_ << " ";
+            std::cout << retrieved_items[i][j].name_ << "\n";
         }
-        std::cout << std::endl;
     }
 
 
