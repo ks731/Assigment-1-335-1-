@@ -55,6 +55,7 @@ int main(){
 
     //test destructor
     delete three;
+    three = nullptr;
 
     //test store()
     two.store(0,0,sword);
