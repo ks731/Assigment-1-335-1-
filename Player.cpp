@@ -62,6 +62,7 @@ int main(){
     two.equip(&sword);
     //test accessors
     std::cout << "Inventory two has equipped: " << two.getEquipped()->name_ << "\n";
+    two.discardEquipped();
     std::cout << "Inventory two's weight: " << two.getWeight() << "\n";
     std::cout << "Inventory two's item count: " << two.getCount() << "\n";
     std::cout << "All of inventory two's items: " << "\n";
