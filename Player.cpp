@@ -51,7 +51,10 @@ int main(){
     // test Constructor
     Inventory one;
     Inventory two;
-    Inventory three;
+    Inventory* three;
+
+    //test destructor
+    delete three;
 
     //test store()
     two.store(0,0,sword);
