@@ -138,6 +138,7 @@ Inventory& Inventory::operator=(Inventory&& rhs){
         inventory_grid_ = std::move(rhs.inventory_grid_);
         weight_ = rhs.weight_;
         item_count_ = rhs.item_count_;
+        delete equipped_;
         equipped_ = rhs.equipped_;
 
         rhs.inventory_grid_.clear();
@@ -151,6 +152,7 @@ Inventory& Inventory::operator=(Inventory&& rhs){
 //Destructor
 Inventory::~Inventory(){
     delete equipped_;
+    equipped_ = nullptr;
 }
 
 
