@@ -38,9 +38,8 @@ Player& Player::operator=(Player&& rhs){
 }
 
 int main(){
-    std::cout<< "Print TESTING .... " << "\n";
     //Items
-    Item sword("Sword", 7.5, WEAPON);
+    Item* sword = new Item("Sword", 7.5, WEAPON);
     Item chestplate("Chestplate", 8.5, ARMOR);
     Item water("Water", 1.5, ACCESSORY);
     Item canon("Canon", 200.7, WEAPON);
@@ -57,12 +56,12 @@ int main(){
     delete three;
 
     //test store()
-    two.store(0,0,sword);
+    two.store(0,0,shoes);
     two.store(0,1,chestplate);
     two.store(1,0,water);
 
     //test equip
-    two.equip(new Item("sword", 7.5, WEAPON));
+    two.equip(sword);
     //test accessors
     std::cout << "Inventory two has equipped: " << two.getEquipped()->name_ << "\n";
     two.discardEquipped();
