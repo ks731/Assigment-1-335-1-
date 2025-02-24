@@ -71,8 +71,9 @@ int main(){
     std::vector<std::vector<Item>> retrieved_items = two.getItems();
     for (size_t i = 0; i < retrieved_items.size(); ++i) {
         for (size_t j = 0; j < retrieved_items[i].size(); ++j) {
-            std::cout << retrieved_items[i][j].name_ << "\n";
+            std::cout << retrieved_items[i][j].name_;
         }
+        std::cout << std::endl;
     }
 
 
